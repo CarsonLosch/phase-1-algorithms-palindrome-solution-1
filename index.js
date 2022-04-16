@@ -1,9 +1,31 @@
+function reverse(word) {
+  //const wordArry = word.split("");
+  //const reversedWordArray = wordArry.reverse();
+  //const reversedWord = reversedWordArray.join("");
+  // return reversedWord;
+  return word.split("").reverse().join("");
+
+}
+
 function isPalindrome(word) {
   // Write your algorithm here
+  //reverse the input string 
+  const reversedWord = reverse(word)
+  //if the input is the same as the reversed input
+  return word === reversedWord;
 }
 
 /* 
   Add your pseudocode here
+
+  that means if the word is the same as the word in reverse, I should return true.
+
+  reverse the input string
+
+  if the input is the same as the reversed input 
+    return true
+  else
+    return false
 */
 
 /*
@@ -15,6 +37,26 @@ if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
+
+  console.log("");
+
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome("mom"));
+
+  console.log("");
+
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome("abba"));
+
+  console.log("");
+
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome("a"));
+
+  console.log("");
+
+  console.log("Expecting: false");
+  console.log("=>", isPalindrome("hi"));
 
   console.log("");
 
